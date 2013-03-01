@@ -1,0 +1,331 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		030D683E16DF86FE00B4BF67 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030D683D16DF86FE00B4BF67 /* CoreLocation.framework */; };
+		039F374816DF829A00152B50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039F374716DF829A00152B50 /* UIKit.framework */; };
+		039F374A16DF829A00152B50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039F374916DF829A00152B50 /* Foundation.framework */; };
+		039F374C16DF829A00152B50 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039F374B16DF829A00152B50 /* CoreGraphics.framework */; };
+		039F375216DF829A00152B50 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 039F375016DF829A00152B50 /* InfoPlist.strings */; };
+		039F375416DF829A00152B50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 039F375316DF829A00152B50 /* main.m */; };
+		039F375816DF829A00152B50 /* WTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 039F375716DF829A00152B50 /* WTAppDelegate.m */; };
+		039F375A16DF829A00152B50 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 039F375916DF829A00152B50 /* Default.png */; };
+		039F375C16DF829A00152B50 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 039F375B16DF829A00152B50 /* Default@2x.png */; };
+		039F375E16DF829A00152B50 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 039F375D16DF829A00152B50 /* Default-568h@2x.png */; };
+		039F376116DF829A00152B50 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039F375F16DF829A00152B50 /* MainStoryboard.storyboard */; };
+		039F376416DF829A00152B50 /* WTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039F376316DF829A00152B50 /* WTViewController.m */; };
+		039F376B16DF85E900152B50 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039F376A16DF85E900152B50 /* MapKit.framework */; };
+		E5E7FFBA16E0E18D00205D31 /* WTHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E7FFB916E0E18D00205D31 /* WTHistoryViewController.m */; };
+		E5E7FFBD16E0E22700205D31 /* WTHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E7FFBC16E0E22700205D31 /* WTHistoryTableViewCell.m */; };
+		E5E7FFC016E0E6AC00205D31 /* WTHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E7FFBF16E0E6AC00205D31 /* WTHistory.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		030D683D16DF86FE00B4BF67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		039F374316DF829A00152B50 /* 查查同济建筑.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "查查同济建筑.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		039F374716DF829A00152B50 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		039F374916DF829A00152B50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		039F374B16DF829A00152B50 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		039F374F16DF829A00152B50 /* 查查同济建筑-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "查查同济建筑-Info.plist"; sourceTree = "<group>"; };
+		039F375116DF829A00152B50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		039F375316DF829A00152B50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		039F375516DF829A00152B50 /* 查查同济建筑-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "查查同济建筑-Prefix.pch"; sourceTree = "<group>"; };
+		039F375616DF829A00152B50 /* WTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTAppDelegate.h; sourceTree = "<group>"; };
+		039F375716DF829A00152B50 /* WTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTAppDelegate.m; sourceTree = "<group>"; };
+		039F375916DF829A00152B50 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		039F375B16DF829A00152B50 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		039F375D16DF829A00152B50 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		039F376016DF829A00152B50 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		039F376216DF829A00152B50 /* WTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTViewController.h; sourceTree = "<group>"; };
+		039F376316DF829A00152B50 /* WTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTViewController.m; sourceTree = "<group>"; };
+		039F376A16DF85E900152B50 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E5E7FFB816E0E18D00205D31 /* WTHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTHistoryViewController.h; sourceTree = "<group>"; };
+		E5E7FFB916E0E18D00205D31 /* WTHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTHistoryViewController.m; sourceTree = "<group>"; };
+		E5E7FFBB16E0E22600205D31 /* WTHistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTHistoryTableViewCell.h; sourceTree = "<group>"; };
+		E5E7FFBC16E0E22700205D31 /* WTHistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTHistoryTableViewCell.m; sourceTree = "<group>"; };
+		E5E7FFBE16E0E6AC00205D31 /* WTHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTHistory.h; sourceTree = "<group>"; };
+		E5E7FFBF16E0E6AC00205D31 /* WTHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTHistory.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		039F374016DF829A00152B50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				030D683E16DF86FE00B4BF67 /* CoreLocation.framework in Frameworks */,
+				039F376B16DF85E900152B50 /* MapKit.framework in Frameworks */,
+				039F374816DF829A00152B50 /* UIKit.framework in Frameworks */,
+				039F374A16DF829A00152B50 /* Foundation.framework in Frameworks */,
+				039F374C16DF829A00152B50 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		039F373816DF829900152B50 = {
+			isa = PBXGroup;
+			children = (
+				039F374D16DF829A00152B50 /* 查查同济建筑 */,
+				039F374616DF829A00152B50 /* Frameworks */,
+				039F374416DF829A00152B50 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		039F374416DF829A00152B50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				039F374316DF829A00152B50 /* 查查同济建筑.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		039F374616DF829A00152B50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				030D683D16DF86FE00B4BF67 /* CoreLocation.framework */,
+				039F376A16DF85E900152B50 /* MapKit.framework */,
+				039F374716DF829A00152B50 /* UIKit.framework */,
+				039F374916DF829A00152B50 /* Foundation.framework */,
+				039F374B16DF829A00152B50 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		039F374D16DF829A00152B50 /* 查查同济建筑 */ = {
+			isa = PBXGroup;
+			children = (
+				039F375616DF829A00152B50 /* WTAppDelegate.h */,
+				039F375716DF829A00152B50 /* WTAppDelegate.m */,
+				039F375F16DF829A00152B50 /* MainStoryboard.storyboard */,
+				039F376216DF829A00152B50 /* WTViewController.h */,
+				039F376316DF829A00152B50 /* WTViewController.m */,
+				E5E7FFB816E0E18D00205D31 /* WTHistoryViewController.h */,
+				E5E7FFB916E0E18D00205D31 /* WTHistoryViewController.m */,
+				E5E7FFBB16E0E22600205D31 /* WTHistoryTableViewCell.h */,
+				E5E7FFBC16E0E22700205D31 /* WTHistoryTableViewCell.m */,
+				E5E7FFBE16E0E6AC00205D31 /* WTHistory.h */,
+				E5E7FFBF16E0E6AC00205D31 /* WTHistory.m */,
+				039F374E16DF829A00152B50 /* Supporting Files */,
+			);
+			path = "查查同济建筑";
+			sourceTree = "<group>";
+		};
+		039F374E16DF829A00152B50 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				039F374F16DF829A00152B50 /* 查查同济建筑-Info.plist */,
+				039F375016DF829A00152B50 /* InfoPlist.strings */,
+				039F375316DF829A00152B50 /* main.m */,
+				039F375516DF829A00152B50 /* 查查同济建筑-Prefix.pch */,
+				039F375916DF829A00152B50 /* Default.png */,
+				039F375B16DF829A00152B50 /* Default@2x.png */,
+				039F375D16DF829A00152B50 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		039F374216DF829A00152B50 /* 查查同济建筑 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 039F376716DF829A00152B50 /* Build configuration list for PBXNativeTarget "查查同济建筑" */;
+			buildPhases = (
+				039F373F16DF829A00152B50 /* Sources */,
+				039F374016DF829A00152B50 /* Frameworks */,
+				039F374116DF829A00152B50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "查查同济建筑";
+			productName = "查查同济建筑";
+			productReference = 039F374316DF829A00152B50 /* 查查同济建筑.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		039F373A16DF829900152B50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WT;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "吴 wuziqi";
+			};
+			buildConfigurationList = 039F373D16DF829900152B50 /* Build configuration list for PBXProject "查查同济建筑" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 039F373816DF829900152B50;
+			productRefGroup = 039F374416DF829A00152B50 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				039F374216DF829A00152B50 /* 查查同济建筑 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		039F374116DF829A00152B50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				039F375216DF829A00152B50 /* InfoPlist.strings in Resources */,
+				039F375A16DF829A00152B50 /* Default.png in Resources */,
+				039F375C16DF829A00152B50 /* Default@2x.png in Resources */,
+				039F375E16DF829A00152B50 /* Default-568h@2x.png in Resources */,
+				039F376116DF829A00152B50 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		039F373F16DF829A00152B50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				039F375416DF829A00152B50 /* main.m in Sources */,
+				039F375816DF829A00152B50 /* WTAppDelegate.m in Sources */,
+				039F376416DF829A00152B50 /* WTViewController.m in Sources */,
+				E5E7FFBA16E0E18D00205D31 /* WTHistoryViewController.m in Sources */,
+				E5E7FFBD16E0E22700205D31 /* WTHistoryTableViewCell.m in Sources */,
+				E5E7FFC016E0E6AC00205D31 /* WTHistory.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		039F375016DF829A00152B50 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				039F375116DF829A00152B50 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		039F375F16DF829A00152B50 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				039F376016DF829A00152B50 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		039F376516DF829A00152B50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		039F376616DF829A00152B50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		039F376816DF829A00152B50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: ping ji (T22KK72UGU)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "查查同济建筑/查查同济建筑-Prefix.pch";
+				INFOPLIST_FILE = "查查同济建筑/查查同济建筑-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "E6CA4B1C-37F6-4466-B1EF-1E30B66EA19A";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		039F376916DF829A00152B50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: ping ji (T22KK72UGU)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "查查同济建筑/查查同济建筑-Prefix.pch";
+				INFOPLIST_FILE = "查查同济建筑/查查同济建筑-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "E6CA4B1C-37F6-4466-B1EF-1E30B66EA19A";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		039F373D16DF829900152B50 /* Build configuration list for PBXProject "查查同济建筑" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				039F376516DF829A00152B50 /* Debug */,
+				039F376616DF829A00152B50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		039F376716DF829A00152B50 /* Build configuration list for PBXNativeTarget "查查同济建筑" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				039F376816DF829A00152B50 /* Debug */,
+				039F376916DF829A00152B50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 039F373A16DF829900152B50 /* Project object */;
+}
