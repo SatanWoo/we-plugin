@@ -287,12 +287,12 @@
 		039F376816DF829A00152B50 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: ping ji (T22KK72UGU)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "查查同济建筑/查查同济建筑-Prefix.pch";
 				INFOPLIST_FILE = "查查同济建筑/查查同济建筑-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "E6CA4B1C-37F6-4466-B1EF-1E30B66EA19A";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -300,12 +300,12 @@
 		039F376916DF829A00152B50 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: ping ji (T22KK72UGU)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "查查同济建筑/查查同济建筑-Prefix.pch";
 				INFOPLIST_FILE = "查查同济建筑/查查同济建筑-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "E6CA4B1C-37F6-4466-B1EF-1E30B66EA19A";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
