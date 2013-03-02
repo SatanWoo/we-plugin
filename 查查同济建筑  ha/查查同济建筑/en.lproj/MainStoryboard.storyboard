@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ie9-Va-ybc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3080" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ie9-Va-ybc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2078"/>
     </dependencies>
     <scenes>
         <!--View Controller - 定位-->
@@ -22,20 +22,6 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="当前建筑名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZbD-WC-jyL">
                                 <rect key="frame" x="20" y="162" width="263" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" id="Nqq-qx-pbO">
-                                <rect key="frame" x="20" y="68" width="136" height="54"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MhZ-kk-JRs">
-                                <rect key="frame" x="25" y="191" width="280" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -73,6 +59,24 @@
                                     <action selector="save:" destination="2" eventType="touchUpInside" id="Qlj-fC-CgC"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="纬度" borderStyle="bezel" minimumFontSize="17" id="7Yd-zZ-DkZ">
+                                <rect key="frame" x="21" y="75" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="建筑名称" borderStyle="bezel" minimumFontSize="17" id="lkZ-1N-34u">
+                                <rect key="frame" x="21" y="193" width="226" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="经度" borderStyle="bezel" minimumFontSize="17" id="oqW-Wq-3zR">
+                                <rect key="frame" x="150" y="75" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -85,8 +89,9 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="locationLabel" destination="Nqq-qx-pbO" id="ASr-nD-QSm"/>
-                        <outlet property="nameLabel" destination="MhZ-kk-JRs" id="DhF-Cu-qSl"/>
+                        <outlet property="latitudeTextField" destination="7Yd-zZ-DkZ" id="0VO-5n-bB3"/>
+                        <outlet property="longtitudeTextField" destination="oqW-Wq-3zR" id="7rz-pi-rL9"/>
+                        <outlet property="nameTextField" destination="lkZ-1N-34u" id="QSH-I3-AKN"/>
                         <outlet property="saveButton" destination="sar-YY-6pb" id="uSL-gZ-n6L"/>
                         <outlet property="startButton" destination="IVb-E7-Eqq" id="tZs-2g-ieP"/>
                     </connections>
@@ -146,8 +151,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="历史纪录" id="bhj-YD-eA1"/>
+                    <navigationItem key="navigationItem" title="历史纪录" id="bhj-YD-eA1">
+                        <barButtonItem key="rightBarButtonItem" title="编辑" id="e7o-2Y-z3J">
+                            <connections>
+                                <action selector="editTableView:" destination="rsx-EU-W7R" id="jgr-Kn-I3v"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="editButton" destination="e7o-2Y-z3J" id="A55-1b-QMm"/>
+                        <outlet property="historyTableView" destination="ApS-pu-iFg" id="BR1-fu-JYS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7LZ-VN-kNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,14 +198,20 @@
         </class>
         <class className="WTHistoryViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WTHistoryViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="editTableView:"/>
+                <relationship kind="outlet" name="editButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="historyTableView" candidateClass="UITableView"/>
+            </relationships>
         </class>
         <class className="WTViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WTViewController.h"/>
             <relationships>
                 <relationship kind="action" name="save:"/>
                 <relationship kind="action" name="startSearchingBuildingName:"/>
-                <relationship kind="outlet" name="locationLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="latitudeTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="longtitudeTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="saveButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="startButton" candidateClass="UIButton"/>
             </relationships>

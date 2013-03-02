@@ -11,10 +11,11 @@
 
 @interface WTViewController : UIViewController<CLLocationManagerDelegate>
 
-@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
+@property (weak, nonatomic) IBOutlet UITextField *latitudeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *longtitudeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 
 - (IBAction)startSearchingBuildingName:(id)sender;
 - (IBAction)save:(id)sender;

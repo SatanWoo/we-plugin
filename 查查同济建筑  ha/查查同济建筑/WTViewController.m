@@ -9,14 +9,13 @@
 #import "WTViewController.h"
 #import "WTHistory.h"
 #import "WTHistoryViewController.h"
-#define kData @"data"
+#import "WTFileManager.h"
+
 
 @interface WTViewController ()
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CLGeocoder *geocoder;
 @property (nonatomic, copy) NSString *fileName;
-@property (nonatomic, strong) NSMutableArray *historyArray;
-
 @property (nonatomic, strong) CLLocation* previousLocation;
 @end
 
@@ -24,12 +23,14 @@
 @synthesize locationManager = _locationManager;
 @synthesize geocoder = _geocoder;
 @synthesize fileName = _fileName;
-@synthesize historyArray = _historyArray;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self configurePlist];
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cancelKeyboard)];
+    [self.view addGestureRecognizer:tapGesture];
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,26 +60,6 @@
     return _geocoder;
 }
 
-- (NSString *)fileName
-{
-    if (_fileName == nil) {
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-        NSString *path = [paths objectAtIndex:0];
-        _fileName = [path stringByAppendingPathComponent:@"data.plist"];
-    }
-    
-    return _fileName;
-}
-
-- (NSMutableArray *)historyArray
-{
-    if (_historyArray == nil) {
-        _historyArray = [[NSMutableArray alloc] init];
-    }
-    
-    return _historyArray;
-}
-
 #pragma mark - Private
 - (CLLocation *)shiftLocation:(CLLocation *)oldLocation
 {
@@ -94,8 +75,9 @@
 
 - (void)disableUserInteraction
 {
-    self.locationLabel.text = @"Updating";
-    self.nameLabel.text = @"Updating";
+    self.latitudeTextField.text = @"Updating";
+    self.longtitudeTextField.text = @"Updating";
+    self.nameTextField.text = @"Updating";
     [self.startButton setEnabled:NO];
 }
 
@@ -106,52 +88,26 @@
 
 - (void)configurePlist
 {
-    NSFileManager* manager = [NSFileManager defaultManager];
-    
-    if (![manager fileExistsAtPath:self.fileName]) {
-      [manager createFileAtPath:self.fileName contents:nil attributes:nil];
-    }
-    
-    [self configureHistory];
+    [[WTFileManager defaultManager] loadFile:@"data.plist"];
 }
 
-- (void)configureHistory
+- (void)cancelKeyboard
 {
-    NSData *data = [NSData dataWithContentsOfFile:self.fileName];
-    NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
-    
-    self.historyArray = [[NSMutableArray alloc]initWithArray:[unarchiver decodeObjectForKey:kData]];
+    [self.latitudeTextField resignFirstResponder];
+    [self.longtitudeTextField resignFirstResponder];
+    [self.nameTextField resignFirstResponder];
 }
 
-- (void)saveData:(WTHistory *)history
+- (void)saveData
 {
-    [self.historyArray addObject:history];
-    [self save:nil];
-}
-
-- (void)createHistoryWithLatitude:(double)latitde
-                              longtitude:(double)longtitude
-                                    name:(NSString *)name
-{
-    WTHistory *history = [[WTHistory alloc] init];
-    history.latitude = latitde;
-    history.longtitude = longtitude;
-    history.name = name;
+    WTHistory *history = [WTHistory createHistoryWithLatitude:[self.latitudeTextField.text doubleValue]
+                                              longtitude:[self.longtitudeTextField.text doubleValue]
+                                                    name:self.nameTextField.text];
     
-    if ([self isValidHistory:history]) {
-        [self saveData:history];
+    if ([history isValidHistory]) {
+        [[WTFileManager defaultManager].historyArray addObject:history];
     }
 }
-
-- (BOOL)isValidHistory:(WTHistory *)history
-{
-    if (history.latitude == 0 || history.longtitude == 0 || history.name == NULL) {
-        return  false;
-    }
-    
-    return true;
-}
-
 
 - (BOOL)isValidLocation:(CLLocation *)location
 {
@@ -160,6 +116,12 @@
     }
     
     return true;
+}
+
+- (void)restartUpdatingLocation
+{
+    [self.locationManager stopUpdatingLocation];
+    [self.locationManager startUpdatingLocation];
 }
 
 #pragma mark - IBAction
@@ -171,24 +133,16 @@
 
 - (IBAction)save:(id)sender
 {
-    NSMutableData *data = [[NSMutableData alloc] init];
-    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
-    
-    [archiver encodeObject:self.historyArray forKey: kData];
-    [archiver finishEncoding];
-    
-    [data writeToFile:self.fileName atomically:YES];
+    [self saveData];
+    [[WTFileManager defaultManager] save];
 }
 
 #pragma mark - CLLocationManagerDelegate
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    NSLog(@"Update");
-    
     CLLocation *shiftLocation = [self shiftLocation:self.locationManager.location];
     if (![self isValidLocation:shiftLocation]) {
-        [self.locationManager stopUpdatingLocation];
-        [self.locationManager startUpdatingLocation];
+        [self restartUpdatingLocation];
         return ;
     }
     
@@ -197,20 +151,9 @@
         [self resumeUserInteraction];
         
         CLPlacemark *mark = [placemarks lastObject];
-        self.nameLabel.text = mark.name;
-        
-        self.locationLabel.text = [NSString stringWithFormat:@"%f\n\n%f",shiftLocation.coordinate.latitude,shiftLocation.coordinate.longitude];
-        
-        [self createHistoryWithLatitude:shiftLocation.coordinate.latitude
-                             longtitude:shiftLocation.coordinate.longitude
-                                   name:mark.name];
+        self.nameTextField.text = mark.name;
+        self.latitudeTextField.text = [NSString stringWithFormat:@"%f", shiftLocation.coordinate.latitude];
+        self.longtitudeTextField.text = [NSString stringWithFormat:@"%f", shiftLocation.coordinate.longitude];
     }];
 }
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    WTHistoryViewController *vc = segue.destinationViewController;
-    vc.historyArray = [NSArray arrayWithArray:self.historyArray];
-}
-
 @end

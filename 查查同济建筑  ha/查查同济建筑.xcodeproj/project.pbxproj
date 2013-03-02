@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		030D683E16DF86FE00B4BF67 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030D683D16DF86FE00B4BF67 /* CoreLocation.framework */; };
+		03439E0F16E23D8D004D0454 /* WTFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 03439E0E16E23D8D004D0454 /* WTFileManager.m */; };
 		039F374816DF829A00152B50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039F374716DF829A00152B50 /* UIKit.framework */; };
 		039F374A16DF829A00152B50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039F374916DF829A00152B50 /* Foundation.framework */; };
 		039F374C16DF829A00152B50 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039F374B16DF829A00152B50 /* CoreGraphics.framework */; };
@@ -27,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		030D683D16DF86FE00B4BF67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		03439E0D16E23D8D004D0454 /* WTFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTFileManager.h; sourceTree = "<group>"; };
+		03439E0E16E23D8D004D0454 /* WTFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTFileManager.m; sourceTree = "<group>"; };
 		039F374316DF829A00152B50 /* 查查同济建筑.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "查查同济建筑.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		039F374716DF829A00152B50 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		039F374916DF829A00152B50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -111,6 +114,8 @@
 				E5E7FFBC16E0E22700205D31 /* WTHistoryTableViewCell.m */,
 				E5E7FFBE16E0E6AC00205D31 /* WTHistory.h */,
 				E5E7FFBF16E0E6AC00205D31 /* WTHistory.m */,
+				03439E0D16E23D8D004D0454 /* WTFileManager.h */,
+				03439E0E16E23D8D004D0454 /* WTFileManager.m */,
 				039F374E16DF829A00152B50 /* Supporting Files */,
 			);
 			path = "查查同济建筑";
@@ -203,6 +208,7 @@
 				E5E7FFBA16E0E18D00205D31 /* WTHistoryViewController.m in Sources */,
 				E5E7FFBD16E0E22700205D31 /* WTHistoryTableViewCell.m in Sources */,
 				E5E7FFC016E0E6AC00205D31 /* WTHistory.m in Sources */,
+				03439E0F16E23D8D004D0454 /* WTFileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,4 +33,25 @@
     return self;
 }
 
++ (WTHistory *)createHistoryWithLatitude:(double)latitde
+                              longtitude:(double)longtitude
+                                    name:(NSString *)name
+{
+    WTHistory *history = [[WTHistory alloc] init];
+    history.latitude = latitde;
+    history.longtitude = longtitude;
+    history.name = name;
+    
+    return history;
+}
+
+- (BOOL)isValidHistory
+{
+    if (self.latitude == 0 || self.longtitude == 0 || self.name == NULL) {
+        return  false;
+    }
+    
+    return true;
+}
+
 @end

@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface WTHistoryViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) NSArray *historyArray;
+@property (copy, nonatomic) NSMutableArray *historyArray;
+@property (weak, nonatomic) IBOutlet UITableView *historyTableView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
+
+- (IBAction)editTableView:(id)sender;
 @end

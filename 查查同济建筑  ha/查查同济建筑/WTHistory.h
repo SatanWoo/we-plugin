@@ -13,4 +13,8 @@
 @property (nonatomic, assign) double longtitude;
 @property (nonatomic, copy) NSString *name;
 
+- (BOOL)isValidHistory;
++ (WTHistory *)createHistoryWithLatitude:(double)latitde
+                              longtitude:(double)longtitude
+                                    name:(NSString *)name;
 @end
